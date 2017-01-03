@@ -1,0 +1,66 @@
+\documentclass[jou]{apa6}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{apacite} 
+
+
+% 500-1000 words by the 10th of January
+
+\title{What is computational reproducibility?}
+\shorttitle{What is computational reproducibility?}
+
+\twoauthors{Olivia Guest}{Nicolas P. Rougier}
+\twoaffiliations{Department of Experimental Psychology\\University College London, United Kingdom}{INRIA Bordeaux Sud-Ouest, Talence, France\\
+Institut des Maladies Neurodégénératives, Université Bordeaux, Centre National de la Recherche Scientifique, UMR 5293, Bordeaux, France\\
+LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux, Centre National de la Recherche Scientifique, UMR 5800, Talence, France}
+%olivia.guest@psy.ox.ac.uk
+%nicolas.rougier@inria.fr
+\abstract{}
+
+\begin{document}
+\maketitle
+%Recap of previous 
+
+In our previous contribution, we proposed computational modelling-related definitions for \textbf{replicable}, i.e., experiments within a model can be recreated using its original codebase, and \textbf{reproducible}, i.e., a model can be recreated based on its specification. We stressed the importance of specifications and of access to codebases. Furthermore, we highlighted an issue in scholarly communication --- many journals do not require nor facilitate the sharing of code. In contrast, many third-party services have filled the gaps left by traditional publishers \cite<e.g.,>{binder, github, osf, rescience}. Notwithstanding, journals and peers rarely request or expect use of such services. We ended by asking: are we ready to associate codebases with articles and are we prepared to ensure computational theories are well-specified and coherently implemented?
+
+% Olivia Notes — Not the actual final product, just notes.
+% Feel free to read, but please don't edit my notes.
+% Although add comments in LaTeX if you really want to. :)
+% Start of Olivia's notes.
+\section{Crook}
+Crook mentions detailed levels at which modelling work can be evaluated scientifically, i.e., re-running and re-writing code both within a lab and by others, which can be seen as falling on the spectrum between replication and reproduction. She also refers to some invaluable community-driven initiatives and tools in which to share codebases and specifications.
+
+Crook draws attention to the matter of empirical data used to validate, train, etc., models. Such data (in)forms part of the theory of the modelling account. Thus data would need re-collecting in order to further test a model's generalisability --- and it would need to be associated with the original article and codebase. 
+
+Ultimately, she hopes (as we do) for top-down publisher-enforced sharing of these resources in partially-centralised on-line repositories.
+
+\section{Kidd}
+Kidd rightfully draws attention to the process we have dubbed reproduction and she reimplementation --- and in fact directly addressing the titular question: what is computational reproducibility? Re-writing modelling work from scratch based on the specification forms the bedrock of the scientific evaluation of such accounts, providing substantial evidence for or against depending on the reimplementation's success. As Kidd mentions, and the authors themselves have discovered \cite{cooper14}, this process can enlighten us with respect to: bugs, when implementation details must be elevated to the theory level and vice versa, and more generally be pedagogically useful and even enjoyable.
+
+\section{Hinsen}
+Hinsen analyses in more detail the levels at which a model can be verified and thus can be trusted. He outlines three such levels of trust: that authors have not introduced bugs, that the model is reproducible as presented, and that it is congruent with empirical data and describing a real-world phenomenon. Hinsen proposes that modellers should detail how models have been and can be verified, by including a section on verification in our articles.
+
+\section{Varoquaux}
+Varoquaux defines reproducibility differently, perhaps more broadly, to us. However we definitely empathise with the problems of code rot, which falls under what we define as replicability. Notwithstanding, the titular computational reproducibility is far more scientifically pertinent than maintaining a re-usable codebase. Software and hardware inevitably goes out of fashion causing codebases to expire, but the ideas encapsulated by a model, the overarching theory, could withstand the effects of time if specified coherently. For example, the code used for the first neural network models is not required in order for a junior researcher to get to grips with the basics. In fact reimplementing previous modelling work has pedagogical benefits as well as scientific ones.
+
+\section{Gureckis and Rich}
+Gureckis and Rich 
+
+\section{French and Addyman}
+French and Addyman
+
+% End of Olivia's notes.
+
+\bibliographystyle{apacite}
+\bibliography{ref}
+% The following space works around a bug in typesetting the references, where the hanging indent of the last reference is incorrectly set.
+\hspace*{1cm}
+\end{document}
