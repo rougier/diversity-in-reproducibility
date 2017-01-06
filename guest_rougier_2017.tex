@@ -33,43 +33,42 @@ LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux, Centre Natio
 In our previous contribution, we proposed computational modelling-related definitions for \textbf{replicable}, i.e., experiments within a model can be recreated using its original codebase, and \textbf{reproducible}, i.e., a model can be recreated based on its specification. We stressed the importance of specifications and of access to codebases. Furthermore, we highlighted an issue in scholarly communication --- many journals do not require nor facilitate the sharing of code. In contrast, many third-party services have filled the gaps left by traditional publishers \cite<e.g.,>{binder, github, osf, rescience}. Notwithstanding, journals and peers rarely request or expect use of such services. We ended by asking: are we ready to associate codebases with articles and are we prepared to ensure computational theories are well-specified and coherently implemented?
 
 % Proposed final structure:
+\section{Proposed Definitions}
+%All the different definitions used by other contributors. 
+%Not convinced this section is needed as can be addressed below, perhaps?
+
 \section{Levels of Evaluation}
-All the ways that have been mentioned for evaluating modelling work. 
+% All the ways that have been mentioned for evaluating modelling work. 
 
-\section{Proposed Solutions}
-All the solutions proposed to fix lack of: code and specification sharing and evaluation.
-
-\section{Conclusion}
-Future directions and feasibility of changes and solutions given previously.
-%end of proposed structure
-
-% Olivia Notes — Not the actual final product, just notes.
-% Feel free to read, but please don't edit my notes.
-% Although add comments in LaTeX if you really want to. :)
-% Start of Olivia's notes.
-\section{Crook}
-Crook mentions detailed levels at which modelling work can be evaluated scientifically, i.e., re-running and re-writing code both within a lab and by others, which can be seen as falling on the spectrum between replication and reproduction. She also refers to some invaluable community-driven initiatives and tools in which to share codebases and specifications.
+Crook mentions detailed levels at which modelling work can be evaluated scientifically, i.e., re-running and re-writing code both within a lab and by others, which can be seen as falling on the spectrum between replication and reproduction. 
 
 Crook draws attention to the matter of empirical data used to validate, train, etc., models. Such data (in)forms part of the theory of the modelling account. Thus data would need re-collecting in order to further test a model's generalisability --- and it would need to be associated with the original article and codebase. 
 
-Ultimately, she hopes (as we do) for top-down publisher-enforced sharing of these resources in partially-centralised on-line repositories.
-
-\section{Kidd}
 Kidd rightfully draws attention to the process we have dubbed reproduction and she reimplementation --- and in fact directly addressing the titular question: what is computational reproducibility? Re-writing modelling work from scratch based on the specification forms the bedrock of the scientific evaluation of such accounts, providing substantial evidence for or against depending on the reimplementation's success. As Kidd mentions, and the authors themselves have discovered \cite{cooper14}, this process can enlighten us with respect to: bugs, when implementation details must be elevated to the theory level and vice versa, and more generally be pedagogically useful and even enjoyable.
 
-\section{Hinsen}
-Hinsen analyses in more detail the levels at which a model can be verified and thus can be trusted. He outlines three such levels of trust: that authors have not introduced bugs, that the model is reproducible as presented, and that it is congruent with empirical data and describing a real-world phenomenon. Hinsen proposes that modellers should detail how models have been and can be verified, by including a section on verification in our articles.
+Hinsen analyses in more detail the levels at which a model can be verified and thus can be trusted. He outlines three such levels of trust: that authors have not introduced bugs, that the model is reproducible as presented, and that it is congruent with empirical data and describing a real-world phenomenon.
 
-\section{Varoquaux}
 Varoquaux defines reproducibility differently, perhaps more broadly, to us. However we definitely empathise with the problems of code rot, which falls under what we define as replicability. Notwithstanding, the titular computational reproducibility is far more scientifically pertinent than maintaining a re-usable codebase. Software and hardware inevitably goes out of fashion causing codebases to expire, but the ideas encapsulated by a model, the overarching theory, could withstand the effects of time if specified coherently. For example, the code used for the first neural network models is not required in order for a junior researcher to get to grips with the basics. In fact reimplementing previous modelling work has pedagogical benefits as well as scientific ones. Indubitably, there is a delicate balance to be struck between how much to focus on reimplementing models and standing on the shoulders of previous modellers. 
 
-\section{Gureckis and Rich}
-Gureckis and Rich zoom out to discuss the empirical, i.e., not directly modelling-related, experimental replication crisis in psychology. The provide their own definitions for reproducible, which is an experiment that can be followed exactly, and replicable, which is an experiment They explain that implicit knowledge used in the running of experiments often goes unmentioned in journal articles. 
+Gureckis and Rich zoom out to discuss the empirical, i.e., not directly modelling-related, experimental replication crisis in psychology. The provide their own definitions for reproducible, which is an experiment that can be followed exactly, and replicable, which is an experiment They explain that implicit knowledge used in the running of experiments often goes unmentioned in journal articles and thus that only experiments run completely on-line (e.g., using Amazon Mechanical Turk) are by definition what they call computationally reproducible. This is the case because they are fully automated. Empistemically, empirical replication and reproduction are distinct to their namesakes in modelling work. Notwithstanding, they are all vital to science. Important also to draw distinction between software for science (e.g., code used to generate a graph, etc.) and science that is software (e.g., codebase for a cognitive model). 
 
-\section{French and Addyman}
-French and Addyman
 
-% End of Olivia's notes.
+
+\section{Proposed Solutions}
+% All the solutions proposed to fix lack of: code and specification sharing and evaluation.
+
+Crook refers to some invaluable community-driven initiatives and tools in which to share codebases and specifications.
+
+Hinsen proposes that modellers should detail how models have been and can be verified, by including a section on verification in our articles.
+
+French and Addyman agree with us on some fundamental issues: sharing the codebase for models is invaluable; journal articles should be linked with their original codebase; specification of models is necessary; and they also implicitly agree with the principles and motivations behind reproducing computational models as practiced by e.g., \citeA{rescience}. 
+
+\section{Conclusion}
+% Future directions and feasibility of changes and solutions given previously.
+
+Ultimately, Crook hopes (as we do) for top-down publisher-enforced sharing of these resources in partially-centralised on-line repositories.
+
+%end of proposed structure
 
 % Start of Nicolas's notes
 
@@ -124,13 +123,12 @@ proposed paradigm (PyNN or NeuroML).
 
 \section{Kidd}
 Celeste Kidd introduces the notion of conceptual replication that goes beyond
-mere reproduction as we've defined it. On a sidenote, may it is important to
+mere reproduction as we've defined it. On a sidenote, maybe it is important to
 re-explain here that we may have misused (inverted actually) replication and
 reproduction as explained by L.Barba in her blog post (url ?). Conceptual
 replication means to try to re-implement the main idea of a model, possibly
 taking a totally novel approach but still getting the same qualitative
-result. Based on Daid Marr three-levels approach, she propose to encompass the
-implementation level in order to guarantee the results. This would offer a
+result. Based on David Marr three-levels approach, she proposes to encompass the implementation level in order to guarantee the results. This would offer a
 powerful confirmation if the original work but it come at the price of
 extensive effort in this conceptual replication.
 
