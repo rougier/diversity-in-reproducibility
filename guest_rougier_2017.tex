@@ -28,70 +28,60 @@ LaBRI, Université de Bordeaux, Institut Polytechnique de Bordeaux, Centre Natio
 \maketitle
 In our previous contribution, we proposed computational modelling-related definitions for \textbf{replicable}, i.e., experiments within a model can be recreated using its original codebase, and \textbf{reproducible}, i.e., a model can be recreated based on its specification. We stressed the importance of specifications and of access to codebases. Furthermore, we highlighted an issue in scholarly communication --- many journals do not require nor facilitate the sharing of code. In contrast, many third-party services have filled the gaps left by traditional publishers \cite<e.g.,>{binder, github, osf, rescience}. Notwithstanding, journals and peers rarely request or expect use of such services. We ended by asking: are we ready to associate codebases with articles and are we prepared to ensure computational theories are well-specified and coherently implemented?
 
-We received a range of replies --- including proposals for: intermediate levels between replicability and reproducibility (Crook, Hinsen); going beyond reproducibility (Kidd); encompassing computational science at large (Gureckis \& Rich, Varoquaux); and addressing communities as a function of expertise (French \& Addyman).
-On the one hand, some focus on broader issues of evaluation, on empirical data collection, or on software engineering.
-On the other hand, some contributions identify specific steps during the process of evaluating modelling accounts. 
-We will touch on the former first.
+\section{Scope of Evaluation}
 
-In the contribution by Varoquaux, reproducibility is defined more broadly, encompassing replicability, e.g., to include code rot \cite<e.g.,>{Eklund12072016}.
+Dialogue contributions include proposals for: intermediate levels between replicability and reproducibility (Crook, Hinsen); going beyond reproducibility (Kidd); encompassing computational science at large (Gureckis \& Rich, Varoquaux); and addressing communities as a function of expertise (French \& Addyman).
+On the one hand, some replies discuss evaluation more broadly, empirical data collection, and software engineering.
+On the other hand, some delve into the details of evaluating modelling accounts.
+We will discuss the former first.
+
+In Varoquaux's contribution, reproducibility includes replicability and code rot \cite<e.g., in fMRI:>{Eklund12072016}.
 However, the titular computational reproducibility is orthogonal to maintaining a re-usable codebase.
-Software and hardware inevitably go out of fashion causing codebases to expire.
-However, the ideas encapsulated by modelling software, the overarching theory, could withstand the effects of entropy if specified coherently.
-% see https://en.wikipedia.org/wiki/Software_entropy
-For example, early artificial neural network codebases are not required for junior researchers to understand the basics.
-Indubitably, there is a balance to be struck between how much to reimplement previous work and how much to stand on the shoulders of other modellers and their code. 
+Software and hardware inevitably go out of fashion meaning codebases expire.
+Nevertheless, the overarching theory encapsulated by modelling software could withstand the effects of entropy if specified coherently, e.g., early artificial neural network codebases are not required to understand nor reproduce these models.
+Indubitably, there is a balance to be struck between reimplementation and re-use.
 
-Gureckis and Rich zoom out to discuss the empirical replication crisis in psychology.
-They provide definitions for \textit{reproducible}, an experiment that can be followed exactly, and \textit{replicable}, an experiment that is reproducible but also requires specific data collection conditions to be met.
-Implicit knowledge on the running of experiments often goes unpublished and thus only fully automated experiments run on-line are computationally reproducible psychology.
+In contrast, Gureckis and Rich extend their scope to the empirical replication crisis in psychology.
+They mention that implicit knowledge often goes unpublished and thus only fully automated on-line experiments are computationally reproducible psychology.
 
-Epistemically, empirical, as well as software, replication and reproduction are distinct from their modelling namesakes.
-They can be seen as six related endeavours.
-The difference between software for science (e.g., code used to run a statistical test on a dataset) and science that is software (e.g., codebase for a cognitive model) is an important one to underline. 
+Epistemically, empirical and software replication and reproduction are distinct from their modelling-related counterparts --- they are six related endeavours.
+The difference between software for science (e.g., a statistical test) and science that is software (e.g., a cognitive model) is an important one to underline. 
 In the former case the code is a tool, in the latter it constitutes an experiment.
 Notwithstanding, all such evaluations have scientific merit.
 
 \section{Levels of Evaluation}
-We mentioned by name two of the levels of evaluating modelling work --- however some of the replies mention further details and checks.
-Consensus is that replicability constitutes the bare minimum.
-For example, Hinsen separates the steps at which a model can be taken as dependable into three levels of trust: that authors have not introduced bugs, that the model is reproducible as presented, and that it is congruent with empirical data and describing a real-world phenomenon.
-These levels roughly map onto the three levels of talking about modelling work more generally as Kidd also notes \cite<e.g.,>{marr82}: the implementation, model, and theory levels.  
+We mentioned two of the levels in which modelling work is evaluated.
+Unanimity is reached on replication as a minimum check, however some dialogue contributions go further.
+To wit, Hinsen separates this endeavor into three steps.
+Specifically we must check that a model is: bug-free; reproducible as presented; congruent with empirical data.
+These roughly map onto the levels of talking about modelling work more generally, as Kidd notes \cite{marr82}.
 
 \subsection{Implementation Level}
-With respect to the implementation level, the codebase itself, there are more gradations of evaluations to carry out.
-As mentioned by Crook: re-running code both within a lab and by others allows for checking for some types of bugs and if assumed-to-be-irrelevant variables, e.g., the random seed, are indeed not driving any of the results.
+With respect to the implementation level, as Crook explains, re-running code both within a lab and by others allows for checking for bugs and, importantly, if assumed-to-be-irrelevant variables, e.g., the random seed, are not driving the results.
 This also ensures documentation is appropriate. 
-Successes at this level indicate a model is \textit{replicable}.
+Success at this level indicates a model is \textit{replicable}.
 
 \subsection{Model Level}
-To evaluate the quality of the specification, we may re-write the model based on it --- what we termed \textit{reproducible}.
-This forms the bedrock of the scientific evaluation of such accounts, providing substantial evidence for or against depending on the reimplementation's success.
-As Kidd mentions, and as the authors themselves have discovered \cite{cooper14}, during this process we can: discern when implementation details must be elevated to the theory level and vice versa; the evaluate the specification; and locate conceptual bugs.
+To evaluate the quality of the specification, we may re-write, i.e., \textit{reproduce}, the model from scratch.
+This provides evidence for or against depending on the reimplementation's success.
+As Kidd mentions, and as we discovered \cite{cooper14}, this process allows us to: discern when implementation details must be elevated to the theory level and vice versa; evaluate the specification; and uncover bugs.
 
 \subsection{Theory Level}
-Science encompasses many methods for evaluating theories and the hypotheses they generate.
-One way is to implement a theory computationally.
-Another is to test predictions by gathering empirical data.
-As Crook points out, this data is also used to evaluate (validate, train, etc.) modelling accounts of the phenomenon of interest --- it (in)forms part of the theory.
-In such cases, data requires re-collecting to further test a model's generalisability.
-As such, data would need to be associated with the original article and codebase. 
-If the phenomenon to-be-modelled, Hinsen warns, does not occur as described by the overarching theoretical account, e.g., if appropriate patterns in the data are not found in follow-up experiments, then both theory and model are brought into question.
-This was highlighted by \citeA[p.~426]{Minsky:1965}: ``to an observer B, an object A* is a model of an object A to the extent that B can use A* to answer questions that interest [them] about A.''
-%do we need a quote here? 
+Many methods exist for testing theories.
+One such method involves computationally implementing a theory --- another is to test predictions by gathering empirical data.
+As Crook points out, such data is also used to evaluate models and should be associated with the original article and codebase. 
+In such cases, empirical data requires re-collecting.
+This is because if the phenomenon to-be-modelled, Hinsen warns, does not occur as described by the overarching theoretical account, then both theory and model are brought into question.
+``A* is a model of [...] A to the extent that [we] can use A* to answer questions [...] about A.'' \cite[p.~426]{Minsky:1965}
 
-\section{Conclusion}
-The breadth of answers we received show that reproducibility can be interpreted in many ways both depending on domain and level of analysis.
-Even though definitions across the replies do not fully converge, we all agree that change is both needed and imminent.
+\section{Conclusions}
+Even though definitions for terms across the replies do not fully converge, all contributors agree that change is needed and imminent.
+A notable divergence of opinion can be found in the reply by French and Addyman, who believe specifications are less vital than we do.
+Importantly, we agree on some fundamentals: sharing codebases; linking articles with codebases; and reproducing models \citeA<e.g.,>{rescience}.
 
-In the contribution by French and Addyman, sharing specifications is seen as less important than we and others envisage, especially with respect to the audience.
-We see an inherent risk in presenting models without some understanding of the computations.
-Importantly however, we do agree on some fundamentals: that sharing the codebase for models is invaluable; that journal articles should be linked with their original codebase; and that the principles and motivations behind reproducing computational models  is useful \citeA<as practiced by e.g.,>{rescience}
-
-For example, in answer to the question we posed: Hinsen proposes that modellers should detail how models have been and can be verified, by including a section on verification in our articles; while Crook refers to some invaluable community-driven initiatives with which to share codebases and specifications. 
-We hope that modelling-focused labs make use of the tools listed to disseminate their work; and that eventually some consensus on how to do this effectively is reached.
-
-Ultimately, Crook hopes as we do for top-down publisher-enforced sharing of these resources in partially-centralised on-line repositories.
-All modellers have a prominent role to play and we should start to make change actually happen.
+In response to our question: Hinsen proposes modellers include a specific article section on evaluation; while Crook lists community-driven initiatives for sharing codebases and specifications. 
+Crook hopes, as we do, for top-down publisher-enforced sharing of resources in partially-centralised repositories.
+However, this does not preclude, and may in fact require, bottom-up demands for change.
 
 \bibliographystyle{apacite}
 \bibliography{ref}
