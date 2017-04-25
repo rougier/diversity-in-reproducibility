@@ -1,4 +1,4 @@
-# Diveristy in reproducibility
+# Diversity in reproducibility
 Olivia Guest and Nicolas P. Rougier
 
 Preprint: https://github.com/rougier/diversity-in-reproducibility/blob/master/guest_rougier_2017.pdf 
